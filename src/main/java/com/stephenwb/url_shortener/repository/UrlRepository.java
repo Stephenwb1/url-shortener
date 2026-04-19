@@ -6,4 +6,6 @@ import com.stephenwb.url_shortener.model.Url;
 
 public interface UrlRepository extends JpaRepository<Url, Long> {
 
+    public Url findByShortCode(String shortCode);
+
 }
