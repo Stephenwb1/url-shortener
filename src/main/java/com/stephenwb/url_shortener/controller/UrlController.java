@@ -26,6 +26,10 @@ public class UrlController {
 
         Url myUrl = urlRepository.findByShortCode(shortCode);
 
+        if (myUrl == null) {
+            return (ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .build());
+        }
         return (ResponseEntity.status(HttpStatus.FOUND)
                 .location(URI.create(myUrl.getOldUrl()))
                 .build());
