@@ -22,7 +22,7 @@ public class UrlController {
     private UrlRepository urlRepository;
 
     @GetMapping("/r/{shortCode}")
-    public ResponseEntity<Void> getUrl(@PathVariable String shortCode) {
+    public ResponseEntity<Void> getUrl(@PathVariable("shortCode") String shortCode) {
 
         Url myUrl = urlRepository.findByShortCode(shortCode);
 
