@@ -6,3 +6,15 @@ https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
 ###
 GET http://localhost:8080/r/ec431d3a
+
+###
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{"username": "stephenwb", "email": "stephenwb360@gmail.com", "password": "abcd1234"}
+
+###
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{"username": "stephenwb", "password": "abcd1234"}
