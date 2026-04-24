@@ -1,6 +1,7 @@
 ###
 POST http://localhost:8080/api/urls
 Content-Type: text/plain
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdGVwaGVud2IiLCJpYXQiOjE3NzcwNjY1NDYsImV4cCI6MTc3NzE1Mjk0Nn0.FPwbf9b1jsYim6BTsrFpOaW47wb4upxcgHYLDb9_T3h9u3Ns8Q9Lrd8JBEKmOySE1zcLbGIlcSDTyN6p4n1-9g
 
 https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
