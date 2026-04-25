@@ -1,0 +1,27 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8081:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/urlshortener
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=password
+      - SPRING_DATA_REDIS_HOST=redis
+      - JWT_SECRET=your-secret-key-must-be-at-least-256-bits!!
+    depends_on:
+      - db
+      - redis
+
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=urlshortener
+    ports:
+      - "5433:5432"
+
+  redis:
+    image: redis
+    ports:
+      - "6380:6379"

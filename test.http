@@ -1,21 +1,20 @@
 ###
-POST http://localhost:8080/api/urls
+POST http://localhost:8081/api/urls
 Content-Type: text/plain
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdGVwaGVud2IiLCJpYXQiOjE3NzcwNjY1NDYsImV4cCI6MTc3NzE1Mjk0Nn0.FPwbf9b1jsYim6BTsrFpOaW47wb4upxcgHYLDb9_T3h9u3Ns8Q9Lrd8JBEKmOySE1zcLbGIlcSDTyN6p4n1-9g
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdGVwaGVud2IxIiwiaWF0IjoxNzc3MDg1OTExLCJleHAiOjE3NzcxNzIzMTF9.YL4GH7A-nYif3zdY4PXPDo3L5eWXLdAIkFvSWbA2-aU
 
 https://www.youtube.com/watch?v=dQw4w9WgXcQ
+###
+GET http://localhost:8081/r/aadd673
 
 ###
-GET http://localhost:8080/r/ec431d3a
-
-###
-POST http://localhost:8080/api/auth/register
+POST http://localhost:8081/api/auth/register
 Content-Type: application/json
 
-{"username": "stephenwb", "email": "stephenwb360@gmail.com", "password": "abcd1234"}
+{"username": "stephenwb1", "email": "stephenwb360@gmail.com", "password": "abcd1234"}
 
 ###
-POST http://localhost:8080/api/auth/login
+POST http://localhost:8081/api/auth/login
 Content-Type: application/json
 
-{"username": "stephenwb", "password": "abcd1234"}
+{"username": "stephenwb1", "password": "abcd1234"}
