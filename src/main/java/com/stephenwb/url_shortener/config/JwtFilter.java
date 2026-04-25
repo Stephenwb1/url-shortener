@@ -32,15 +32,20 @@ public class JwtFilter extends OncePerRequestFilter {
             return;
         }
         String token = header.substring(7);
-        String username = Jwts.parser()
-                .verifyWith(Keys.hmacShaKeyFor(jwtSecret.getBytes()))
-                .build()
-                .parseSignedClaims(token)
-                .getPayload()
-                .getSubject();
+        try {
+            String username = Jwts.parser()
+                    .verifyWith(Keys.hmacShaKeyFor(jwtSecret.getBytes()))
+                    .build()
+                    .parseSignedClaims(token)
+                    .getPayload()
+                    .getSubject();
 
-        UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(username, null, List.of());
-        SecurityContextHolder.getContext().setAuthentication(auth);
+            UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(username, null,
+                    List.of());
+            SecurityContextHolder.getContext().setAuthentication(auth);
+        } catch (Exception e) {
+            System.out.println("JWT error: " + e.getMessage());
+        }
         filterChain.doFilter(request, response);
     }
 
