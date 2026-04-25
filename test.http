@@ -1,20 +1,19 @@
 ###
-POST http://localhost:8081/api/urls
+POST https://url-shortener-production-aef1.up.railway.app/api/urls
 Content-Type: text/plain
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdGVwaGVud2IxIiwiaWF0IjoxNzc3MDg1OTExLCJleHAiOjE3NzcxNzIzMTF9.YL4GH7A-nYif3zdY4PXPDo3L5eWXLdAIkFvSWbA2-aU
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdGVwaGVud2IxIiwiaWF0IjoxNzc3MDg3NDIyLCJleHAiOjE3NzcxNzM4MjJ9.6gcU6JXxntoE7zkaon_UrtimDTP30r-eUak9OWSvP0YKVZsFaj8tayh4WOf3bDmQIteYiJfx4e6trD09lvngbA
 
 https://www.youtube.com/watch?v=dQw4w9WgXcQ
 ###
-GET http://localhost:8081/r/aadd673
-
+GET https://url-shortener-production-aef1.up.railway.app/r/aeca323
 ###
-POST http://localhost:8081/api/auth/register
+POST https://url-shortener-production-aef1.up.railway.app/api/auth/register
 Content-Type: application/json
 
 {"username": "stephenwb1", "email": "stephenwb360@gmail.com", "password": "abcd1234"}
 
 ###
-POST http://localhost:8081/api/auth/login
+POST https://url-shortener-production-aef1.up.railway.app/api/auth/login
 Content-Type: application/json
 
 {"username": "stephenwb1", "password": "abcd1234"}
